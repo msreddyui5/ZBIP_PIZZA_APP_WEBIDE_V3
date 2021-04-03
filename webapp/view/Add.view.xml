@@ -1,0 +1,36 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" xmlns:footerbar="sap.ushell.ui.footerbar" controllerName="pizza.controller.Add">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>addTitle}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<f:SimpleForm id="anubhavSimple" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="3" columnsM="8"
+				columnsXL="5" columnsL="5" emptySpanXL="3" emptySpanL="3" emptySpanM="1">
+				<f:content>
+					<Label text="Emp Id"></Label>
+					<Input></Input>
+					<Label text="First and Last Name"></Label>
+					<Input>
+						<layoutData>
+							<l:GridData span="XL2 L2 M2"></l:GridData>
+						</layoutData>
+					</Input>
+					<Input>
+						<layoutData>
+							<l:GridData span="XL2 L2 M3"></l:GridData>
+						</layoutData>
+					</Input>
+					<Input>
+						<layoutData>
+							<l:GridData span="XL2 L2 M3"></l:GridData>
+						</layoutData>
+					</Input>
+					<Label text="Salary"></Label>
+					<Input></Input>
+					<Input></Input>
+					<Label text="City"></Label>
+					<Input></Input>
+				</f:content>
+			</f:SimpleForm>
+		</semantic:content>
+	</semantic:DetailPage>
+</mvc:View>

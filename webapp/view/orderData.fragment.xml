@@ -1,0 +1,64 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<f:Form id="MainForm" editable="false">
+		<f:layout>
+			<f:GridLayout labelSpanXL="2" labelSpanL="2" emptySpanXL="0"
+			emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="10"
+			columnsL="10" columnsM="8" singleContainerFullSize="false"></f:GridLayout>
+		</f:layout>
+		<f:formContainers>
+			<f:FormContainer title="Customer Information">
+				<f:formElements>
+					<f:FormElement label="Company Name">
+						<f:fields>
+							<Text text="{ToOrderCustomer/CompanyName}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Company Id">
+						<f:fields>
+							<Text text="{ToOrderCustomer/BpId}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Email Id">
+						<f:fields>
+							<Text text="{ToOrderCustomer/EmailAddress}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Currency">
+						<f:fields>
+							<Text text="{ToOrderCustomer/CurrencyCode}"></Text>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+				<f:layoutData>
+					<f:GridContainerData halfGrid="true"></f:GridContainerData>
+				</f:layoutData>
+			</f:FormContainer>
+			
+			<f:FormContainer title="Delivery information">
+				<f:formElements>
+					<f:FormElement label="Delivery Date">
+						<f:fields>
+							<Text text="{ToOrderDelivery/DeliveryDate}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Routing Path">
+						<f:fields>
+							<Text text="{
+								path: 'ToOrderDelivery/RoutingPath',
+								formatter: '.formatter.getChannel'
+							}"></Text>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement label="Partner">
+						<f:fields>
+							<Text text="{ToOrderDelivery/CourierPartner}"></Text>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+				<f:layoutData>
+					<f:GridContainerData halfGrid="true"></f:GridContainerData>
+				</f:layoutData>
+			</f:FormContainer>
+		</f:formContainers>
+	</f:Form>
+</core:FragmentDefinition>
